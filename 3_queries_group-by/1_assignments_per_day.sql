@@ -1,4 +1,2 @@
-SELECT assignments.day, SUM(assignments.day) as total_assigments
-FROM assignments
-JOIN assignment_submissions ON assignments.id = assignment_submissions.id
-GROUP BY assignments.day;
+SELECT day, COUNT(day) as total_assignments FROM assignments
+GROUP BY day ORDER BY day;
